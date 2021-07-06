@@ -30,10 +30,9 @@ app.get('/data', cors(corsOptions), (req, res) => {
   connection.end()
 });
 
-server.listen(80, "https://stc-testtask.herokuapp.com", (err) => {
+server.listen(8080, (err) => {
   if (err) {
     throw Error(err);
   }
-  //console.log(app)
   console.log('Server started')
 });
