@@ -2,7 +2,10 @@ import './App.css';
 import axios from 'axios'
 import React from 'react';
 
+
 function App() {
+
+  
   const [data, setData] = React.useState({
     active: "enabled",
   })
@@ -25,7 +28,7 @@ function App() {
       width: "300px",
       marginLeft: "-150px"
     }}>Данные загружаются...</p>))
-    const db = await axios.get("https://213.128.1.15:8080/data")
+    const db = await axios.get("https://localhost:8080/data")
     setTimeout(() => { setData(prev => ({ ...prev, data: db.data, active: "enabled" })) }, 500)
 
   }
