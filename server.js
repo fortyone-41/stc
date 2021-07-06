@@ -30,10 +30,10 @@ app.get('/data', cors(corsOptions), (req, res) => {
   connection.end()
 });
 
-server.listen(9999, (err) => {
+server.listen(80, (err) => {
   if (err) {
     throw Error(err);
   }
-  console.log(server)
+  //console.log(app)
   console.log('Server started')
 });
