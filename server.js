@@ -4,11 +4,14 @@ const cors = require('cors');
 const app = express();
 const server = require('http').Server(app)
 const mysql = require('mysql2')
-
+const corsOptions = {
+  origin: '*',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
 app.use(express.json());
 app.use(cors())
 
-app.get('/data', (req, res) => {   
+app.get('/data', cors(corsOptions), (req, res) => {   
   const connection = mysql.createConnection({
     host: "pk1l4ihepirw9fob.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     user: "h36iy87qw1o1etf3",
