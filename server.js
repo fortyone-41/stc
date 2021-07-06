@@ -6,7 +6,9 @@ const server = require('http').Server(app)
 const mysql = require('mysql2')
 const corsOptions = {
   origin: '*',
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+  methods: ["GET", "POST"],
+  allowedHeaders: ["my-custom-header"],
+  credentials: true
 }
 app.use(express.json());
 app.use(cors())
@@ -32,5 +34,6 @@ server.listen(9999, (err) => {
   if (err) {
     throw Error(err);
   }
+  console.log(server)
   console.log('Server started')
 });
