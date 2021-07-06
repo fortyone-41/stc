@@ -10,11 +10,11 @@ app.use(cors())
 
 app.get('/data', (req, res) => {   
   const connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    database: "stk",
-    password: "password",
-    port: "3307"
+    host: "pk1l4ihepirw9fob.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    user: "h36iy87qw1o1etf3",
+    database: "gwmnknro0kno2yef",
+    password: "ch0gjtch3rtgncse",
+    port: "3306"
   });
    
   connection.query("SELECT * FROM tasks",
