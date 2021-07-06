@@ -35,7 +35,7 @@ function App() {
       <div className="input-group flex-nowrap" >
         <span className="input-group-text" id="addon-wrapping">Нажмите для выгрузки данных</span>
         <button className={"btn btn-primary : " + data.active} onClick={getData} type="button" id="button-addon1">Выгрузить</button>
-        <button className="btn btn-secondary" onClick={() => setData()} type="button" id="button-addon1">Очистить</button>
+        <button className="btn btn-secondary" onClick={() => setData()} type="button" name="button-addon1" id="button-addon1">Очистить</button>
       </div>
       {data.data ? (<table className="table">
         <thead>
