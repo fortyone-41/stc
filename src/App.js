@@ -25,7 +25,7 @@ function App() {
       width: "300px",
       marginLeft: "-150px"
     }}>Данные загружаются...</p>))
-    const db = await axios.get("http://192.168.1.6/data")
+    const db = await axios.get("https://stc-testtask.herokuapp.com/data")
     setTimeout(() => { setData(prev => ({ ...prev, data: db.data, active: "enabled" })) }, 500)
 
   }
